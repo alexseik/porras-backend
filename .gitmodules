@@ -1,3 +1,3 @@
-[submodule "app/app/plugins/content-export-import"]
-	path = app/app/plugins/content-export-import
+[submodule "app/plugins/content-export-import"]
+	path = app/plugins/content-export-import
 	url = https://github.com/lazurey/strapi-plugin-content-export-import
