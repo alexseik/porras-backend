@@ -20,7 +20,7 @@
       "columnName": "local",
       "model": "team"
     },
-    "team": {
+    "visitant": {
       "model": "team"
     },
     "localScore": {

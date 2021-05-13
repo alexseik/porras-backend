@@ -566,7 +566,7 @@
               }
             }
           },
-          "team": {
+          "visitant": {
             "required": [
               "id",
               "emblem"
@@ -682,7 +682,7 @@
           "local": {
             "type": "string"
           },
-          "team": {
+          "visitant": {
             "type": "string"
           },
           "localScore": {

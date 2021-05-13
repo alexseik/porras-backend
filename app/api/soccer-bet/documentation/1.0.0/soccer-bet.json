@@ -551,7 +551,7 @@
               "local": {
                 "type": "string"
               },
-              "team": {
+              "visitant": {
                 "type": "string"
               },
               "localScore": {
