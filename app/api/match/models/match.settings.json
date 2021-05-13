@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "matches",
+  "info": {
+    "name": "Match",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "date": {
+      "type": "datetime",
+      "required": true
+    },
+    "local": {
+      "columnName": "local",
+      "model": "team"
+    },
+    "team": {
+      "model": "team"
+    },
+    "localScore": {
+      "type": "integer"
+    },
+    "visitingScore": {
+      "type": "integer"
+    },
+    "competition": {
+      "model": "competition"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "coming",
+        "playing",
+        "finished"
+      ],
+      "required": true,
+      "default": "coming"
+    }
+  }
+}

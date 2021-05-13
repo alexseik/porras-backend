@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "groups",
+  "info": {
+    "name": "Group"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "name": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "required": true
+    },
+    "competition": {
+      "model": "competition",
+      "via": "groups"
+    },
+    "users": {
+      "via": "groups",
+      "plugin": "users-permissions",
+      "collection": "user"
+    }
+  }
+}

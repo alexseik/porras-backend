@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "competitions",
+  "info": {
+    "name": "Competition",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "key": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "description": {
+      "type": "text"
+    },
+    "start": {
+      "type": "date",
+      "required": true
+    },
+    "end": {
+      "type": "date",
+      "required": true
+    },
+    "groups": {
+      "via": "competition",
+      "collection": "group"
+    }
+  }
+}

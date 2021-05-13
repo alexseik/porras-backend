@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/soccer-bets",
+      "handler": "soccer-bet.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/soccer-bets/count",
+      "handler": "soccer-bet.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/soccer-bets/:id",
+      "handler": "soccer-bet.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/soccer-bets",
+      "handler": "soccer-bet.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/soccer-bets/:id",
+      "handler": "soccer-bet.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/soccer-bets/:id",
+      "handler": "soccer-bet.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

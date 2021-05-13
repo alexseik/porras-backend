@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "soccer_bets",
+  "info": {
+    "name": "SoccerBet",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "match": {
+      "model": "match"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "localScore": {
+      "type": "integer"
+    },
+    "visitingScore": {
+      "type": "integer",
+      "required": false
+    },
+    "group": {
+      "model": "group"
+    }
+  }
+}
