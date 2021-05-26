@@ -567,6 +567,9 @@
                     "type": "string"
                   }
                 },
+                "favorite": {
+                  "type": "string"
+                },
                 "created_by": {
                   "type": "string"
                 },

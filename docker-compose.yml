@@ -23,5 +23,7 @@ services:
       MONGO_INITDB_DATABASE: strapi
       MONGO_INITDB_ROOT_USERNAME: strapi
       MONGO_INITDB_ROOT_PASSWORD: strapi
+    ports:
+      - '27017:27017'
     volumes:
       - ./data:/data/db

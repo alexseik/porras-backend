@@ -41,6 +41,12 @@
       ],
       "required": true,
       "default": "coming"
+    },
+    "fase": {
+      "type": "string"
+    },
+    "bonus": {
+      "type": "boolean"
     }
   }
 }

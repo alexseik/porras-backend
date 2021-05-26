@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "soccer_bets",
+  "collectionName": "points",
   "info": {
-    "name": "SoccerBet",
+    "name": "Points",
     "description": ""
   },
   "options": {
@@ -12,23 +12,16 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "match": {
-      "model": "match",
-      "via": "soccer_bet"
-    },
-    "user": {
+    "users_permissions_user": {
       "plugin": "users-permissions",
       "model": "user"
     },
-    "localScore": {
+    "points": {
       "type": "integer"
     },
-    "visitingScore": {
-      "type": "integer",
-      "required": false
-    },
-    "group": {
-      "model": "group"
+    "classification": {
+      "via": "points",
+      "model": "classification"
     }
   }
 }

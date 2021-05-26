@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/matches": {
+    "/classifications": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Match"
+                    "$ref": "#/components/schemas/Classification"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Match"
+          "Classification"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Match"
+                  "$ref": "#/components/schemas/Classification"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Match"
+          "Classification"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewMatch"
+                "$ref": "#/components/schemas/NewClassification"
               }
             }
           }
         }
       }
     },
-    "/matches/count": {
+    "/classifications/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Match"
+          "Classification"
         ],
         "parameters": []
       }
     },
-    "/matches/{id}": {
+    "/classifications/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Match"
+                  "$ref": "#/components/schemas/Classification"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Match"
+          "Classification"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Match"
+                  "$ref": "#/components/schemas/Classification"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Match"
+          "Classification"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewMatch"
+                "$ref": "#/components/schemas/NewClassification"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Match"
+          "Classification"
         ],
         "parameters": [
           {
@@ -514,24 +514,18 @@
   },
   "components": {
     "schemas": {
-      "Match": {
+      "Classification": {
         "required": [
-          "id",
-          "date",
-          "status"
+          "id"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "date": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "local": {
+          "group": {
             "required": [
               "id",
-              "emblem"
+              "name"
             ],
             "properties": {
               "id": {
@@ -540,10 +534,16 @@
               "name": {
                 "type": "string"
               },
-              "shortname": {
+              "competition": {
                 "type": "string"
               },
-              "emblem": {
+              "users": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "classification": {
                 "type": "string"
               },
               "localizations": {
@@ -566,140 +566,34 @@
               }
             }
           },
-          "visitant": {
-            "required": [
-              "id",
-              "emblem"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "shortname": {
-                "type": "string"
-              },
-              "emblem": {
-                "type": "string"
-              },
-              "localizations": {
-                "type": "array",
-                "items": {
+          "points": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "users_permissions_user": {
+                  "type": "string"
+                },
+                "points": {
+                  "type": "integer"
+                },
+                "classification": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
                   "type": "string"
                 }
-              },
-              "locale": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "localScore": {
-            "type": "integer"
-          },
-          "visitingScore": {
-            "type": "integer"
-          },
-          "competition": {
-            "required": [
-              "id",
-              "key",
-              "name",
-              "start",
-              "end"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "key": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "start": {
-                "type": "string"
-              },
-              "end": {
-                "type": "string"
-              },
-              "groups": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "status": {
-            "type": "string",
-            "default": "coming",
-            "enum": [
-              "coming",
-              "playing",
-              "finished"
-            ]
-          },
-          "fase": {
-            "type": "string"
-          },
-          "bonus": {
-            "type": "boolean"
-          },
-          "soccer_bet": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "match": {
-                "type": "string"
-              },
-              "user": {
-                "type": "string"
-              },
-              "localScore": {
-                "type": "integer"
-              },
-              "visitingScore": {
-                "type": "integer"
-              },
-              "group": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
               }
             }
           },
@@ -709,48 +603,16 @@
           }
         }
       },
-      "NewMatch": {
-        "required": [
-          "date",
-          "status"
-        ],
+      "NewClassification": {
         "properties": {
-          "date": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "local": {
+          "group": {
             "type": "string"
           },
-          "visitant": {
-            "type": "string"
-          },
-          "localScore": {
-            "type": "integer"
-          },
-          "visitingScore": {
-            "type": "integer"
-          },
-          "competition": {
-            "type": "string"
-          },
-          "status": {
-            "type": "string",
-            "default": "coming",
-            "enum": [
-              "coming",
-              "playing",
-              "finished"
-            ]
-          },
-          "fase": {
-            "type": "string"
-          },
-          "bonus": {
-            "type": "boolean"
-          },
-          "soccer_bet": {
-            "type": "string"
+          "points": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "published_at": {
             "type": "string",
@@ -768,7 +630,7 @@
   },
   "tags": [
     {
-      "name": "Match"
+      "name": "Classification"
     }
   ]
 }

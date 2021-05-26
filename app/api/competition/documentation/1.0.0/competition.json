@@ -566,6 +566,9 @@
                     "type": "string"
                   }
                 },
+                "classification": {
+                  "type": "string"
+                },
                 "localizations": {
                   "type": "array",
                   "items": {

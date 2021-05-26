@@ -615,12 +615,43 @@
                     "type": "string"
                   }
                 },
+                "favorite": {
+                  "type": "string"
+                },
                 "created_by": {
                   "type": "string"
                 },
                 "updated_by": {
                   "type": "string"
                 }
+              }
+            }
+          },
+          "classification": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "group": {
+                "type": "string"
+              },
+              "points": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
           },
@@ -646,6 +677,9 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "classification": {
+                  "type": "string"
                 },
                 "localizations": {
                   "type": "array",
@@ -693,6 +727,9 @@
             "items": {
               "type": "string"
             }
+          },
+          "classification": {
+            "type": "string"
           },
           "localizations": {
             "type": "array",

@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "classifications",
+  "info": {
+    "name": "Classification",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "group": {
+      "model": "group",
+      "via": "classification"
+    },
+    "points": {
+      "via": "classification",
+      "collection": "points"
+    }
+  }
+}

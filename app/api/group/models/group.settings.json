@@ -32,6 +32,10 @@
       "via": "groups",
       "plugin": "users-permissions",
       "collection": "user"
+    },
+    "classification": {
+      "via": "group",
+      "model": "classification"
     }
   }
 }

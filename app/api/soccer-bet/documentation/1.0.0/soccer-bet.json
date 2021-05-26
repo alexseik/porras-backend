@@ -571,6 +571,15 @@
                   "finished"
                 ]
               },
+              "fase": {
+                "type": "string"
+              },
+              "bonus": {
+                "type": "boolean"
+              },
+              "soccer_bet": {
+                "type": "string"
+              },
               "published_at": {
                 "type": "string"
               },
@@ -625,6 +634,9 @@
                   "type": "string"
                 }
               },
+              "favorite": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -659,6 +671,9 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "classification": {
+                "type": "string"
               },
               "localizations": {
                 "type": "array",

@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/matches": {
+    "/points": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find all the points's records",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve points document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Match"
+                    "$ref": "#/components/schemas/Points"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Match"
+          "Points"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new record",
+        "description": "Create a new points record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve points document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Match"
+                  "$ref": "#/components/schemas/Points"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Match"
+          "Points"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewMatch"
+                "$ref": "#/components/schemas/NewPoints"
               }
             }
           }
         }
       }
     },
-    "/matches/count": {
+    "/points/count": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Retrieve the numver of points documents",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve points document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,22 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Match"
+          "Points"
         ],
         "parameters": []
       }
     },
-    "/matches/{id}": {
+    "/points/{id}": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find one points record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve points document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Match"
+                  "$ref": "#/components/schemas/Points"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Match"
+          "Points"
         ],
         "parameters": [
           {
@@ -376,14 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a record",
+        "description": "Update a single points record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve points document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Match"
+                  "$ref": "#/components/schemas/Points"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Match"
+          "Points"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewMatch"
+                "$ref": "#/components/schemas/NewPoints"
               }
             }
           }
@@ -449,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a record",
+        "description": "Delete a single points record",
         "responses": {
           "200": {
-            "description": "deletes a single record based on the ID supplied",
+            "description": "deletes a single points based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Match"
+          "Points"
         ],
         "parameters": [
           {
@@ -514,127 +514,49 @@
   },
   "components": {
     "schemas": {
-      "Match": {
+      "Points": {
         "required": [
-          "id",
-          "date",
-          "status"
+          "id"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "date": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "local": {
+          "users_permissions_user": {
             "required": [
               "id",
-              "emblem"
+              "username",
+              "email"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "name": {
+              "username": {
                 "type": "string"
               },
-              "shortname": {
+              "email": {
                 "type": "string"
               },
-              "emblem": {
+              "provider": {
                 "type": "string"
               },
-              "localizations": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "locale": {
+              "password": {
                 "type": "string"
               },
-              "published_at": {
+              "resetPasswordToken": {
                 "type": "string"
               },
-              "created_by": {
+              "confirmationToken": {
                 "type": "string"
               },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "visitant": {
-            "required": [
-              "id",
-              "emblem"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
+              "confirmed": {
+                "type": "boolean"
               },
-              "name": {
-                "type": "string"
+              "blocked": {
+                "type": "boolean"
               },
-              "shortname": {
-                "type": "string"
-              },
-              "emblem": {
-                "type": "string"
-              },
-              "localizations": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "locale": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "localScore": {
-            "type": "integer"
-          },
-          "visitingScore": {
-            "type": "integer"
-          },
-          "competition": {
-            "required": [
-              "id",
-              "key",
-              "name",
-              "start",
-              "end"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "key": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "start": {
-                "type": "string"
-              },
-              "end": {
+              "role": {
                 "type": "string"
               },
               "groups": {
@@ -643,7 +565,7 @@
                   "type": "string"
                 }
               },
-              "published_at": {
+              "favorite": {
                 "type": "string"
               },
               "created_by": {
@@ -654,22 +576,10 @@
               }
             }
           },
-          "status": {
-            "type": "string",
-            "default": "coming",
-            "enum": [
-              "coming",
-              "playing",
-              "finished"
-            ]
+          "points": {
+            "type": "integer"
           },
-          "fase": {
-            "type": "string"
-          },
-          "bonus": {
-            "type": "boolean"
-          },
-          "soccer_bet": {
+          "classification": {
             "required": [
               "id"
             ],
@@ -677,20 +587,14 @@
               "id": {
                 "type": "string"
               },
-              "match": {
-                "type": "string"
-              },
-              "user": {
-                "type": "string"
-              },
-              "localScore": {
-                "type": "integer"
-              },
-              "visitingScore": {
-                "type": "integer"
-              },
               "group": {
                 "type": "string"
+              },
+              "points": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
               "published_at": {
                 "type": "string"
@@ -709,47 +613,15 @@
           }
         }
       },
-      "NewMatch": {
-        "required": [
-          "date",
-          "status"
-        ],
+      "NewPoints": {
         "properties": {
-          "date": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "local": {
+          "users_permissions_user": {
             "type": "string"
           },
-          "visitant": {
-            "type": "string"
-          },
-          "localScore": {
+          "points": {
             "type": "integer"
           },
-          "visitingScore": {
-            "type": "integer"
-          },
-          "competition": {
-            "type": "string"
-          },
-          "status": {
-            "type": "string",
-            "default": "coming",
-            "enum": [
-              "coming",
-              "playing",
-              "finished"
-            ]
-          },
-          "fase": {
-            "type": "string"
-          },
-          "bonus": {
-            "type": "boolean"
-          },
-          "soccer_bet": {
+          "classification": {
             "type": "string"
           },
           "published_at": {
@@ -768,7 +640,7 @@
   },
   "tags": [
     {
-      "name": "Match"
+      "name": "Points"
     }
   ]
 }
