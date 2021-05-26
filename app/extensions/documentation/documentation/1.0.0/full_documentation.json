@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "05/26/2021 4:27:24 PM"
+    "x-generation-date": "05/26/2021 5:00:56 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -6494,40 +6494,6 @@
           "bonus": {
             "type": "boolean"
           },
-          "soccer_bet": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "match": {
-                "type": "string"
-              },
-              "user": {
-                "type": "string"
-              },
-              "localScore": {
-                "type": "integer"
-              },
-              "visitingScore": {
-                "type": "integer"
-              },
-              "group": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -6573,9 +6539,6 @@
           },
           "bonus": {
             "type": "boolean"
-          },
-          "soccer_bet": {
-            "type": "string"
           },
           "published_at": {
             "type": "string",
@@ -6719,62 +6682,6 @@
           "id": {
             "type": "string"
           },
-          "match": {
-            "required": [
-              "id",
-              "date",
-              "status"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "date": {
-                "type": "string"
-              },
-              "local": {
-                "type": "string"
-              },
-              "visitant": {
-                "type": "string"
-              },
-              "localScore": {
-                "type": "integer"
-              },
-              "visitingScore": {
-                "type": "integer"
-              },
-              "competition": {
-                "type": "string"
-              },
-              "status": {
-                "type": "string",
-                "enum": [
-                  "coming",
-                  "playing",
-                  "finished"
-                ]
-              },
-              "fase": {
-                "type": "string"
-              },
-              "bonus": {
-                "type": "boolean"
-              },
-              "soccer_bet": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
           "user": {
             "required": [
               "id",
@@ -6887,9 +6794,6 @@
       },
       "NewSoccer-bet": {
         "properties": {
-          "match": {
-            "type": "string"
-          },
           "user": {
             "type": "string"
           },

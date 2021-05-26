@@ -669,40 +669,6 @@
           "bonus": {
             "type": "boolean"
           },
-          "soccer_bet": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "match": {
-                "type": "string"
-              },
-              "user": {
-                "type": "string"
-              },
-              "localScore": {
-                "type": "integer"
-              },
-              "visitingScore": {
-                "type": "integer"
-              },
-              "group": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -748,9 +714,6 @@
           },
           "bonus": {
             "type": "boolean"
-          },
-          "soccer_bet": {
-            "type": "string"
           },
           "published_at": {
             "type": "string",

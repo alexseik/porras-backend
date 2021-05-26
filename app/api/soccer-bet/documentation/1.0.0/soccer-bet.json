@@ -535,62 +535,6 @@
           "id": {
             "type": "string"
           },
-          "match": {
-            "required": [
-              "id",
-              "date",
-              "status"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "date": {
-                "type": "string"
-              },
-              "local": {
-                "type": "string"
-              },
-              "visitant": {
-                "type": "string"
-              },
-              "localScore": {
-                "type": "integer"
-              },
-              "visitingScore": {
-                "type": "integer"
-              },
-              "competition": {
-                "type": "string"
-              },
-              "status": {
-                "type": "string",
-                "enum": [
-                  "coming",
-                  "playing",
-                  "finished"
-                ]
-              },
-              "fase": {
-                "type": "string"
-              },
-              "bonus": {
-                "type": "boolean"
-              },
-              "soccer_bet": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
           "user": {
             "required": [
               "id",
@@ -703,9 +647,6 @@
       },
       "NewSoccer-bet": {
         "properties": {
-          "match": {
-            "type": "string"
-          },
           "user": {
             "type": "string"
           },

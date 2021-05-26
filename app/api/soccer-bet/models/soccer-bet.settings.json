@@ -12,10 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "match": {
-      "model": "match",
-      "via": "soccer_bet"
-    },
     "user": {
       "plugin": "users-permissions",
       "model": "user"
