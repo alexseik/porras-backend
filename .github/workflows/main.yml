@@ -29,4 +29,5 @@ jobs:
           port: ${{ secrets.PORT }}
           script: |
             cd porras/backend
+            ls .
             ./deploy.sh
