@@ -1,7 +1,8 @@
 version: '3'
 services:
   strapi:
-    image: strapi/strapi
+    build:
+      context: ./app
     environment:
       DATABASE_CLIENT: mongo
       DATABASE_NAME: strapi
@@ -9,9 +10,6 @@ services:
       DATABASE_PORT: 27017
       DATABASE_USERNAME: strapi
       DATABASE_PASSWORD: strapi
-    user: ${CURRENT_UID}
-    volumes:
-      - ./app:/srv/app
     ports:
       - '1337:1337'
     depends_on:
