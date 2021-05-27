@@ -30,4 +30,4 @@ jobs:
           script: |
             cd porras/backend
             ls .
-            ./deploy.sh
+            ./deploy.sh strapi
