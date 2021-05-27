@@ -28,5 +28,10 @@ jobs:
           key: ${{ secrets.DIGITALOCEAN_KEY }}
           port: ${{ secrets.PORT }}
           script: |
+<<<<<<< HEAD
             cd porras/backend
             deploy.sh
+=======
+            whoami
+            ls -al
+>>>>>>> Update main.yml
