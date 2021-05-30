@@ -25,6 +25,12 @@
     },
     "group": {
       "model": "group"
+    },
+    "match": {
+      "model": "match"
+    },
+    "bet_points": {
+      "type": "integer"
     }
   }
 }

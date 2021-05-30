@@ -639,6 +639,62 @@
               }
             }
           },
+          "match": {
+            "required": [
+              "id",
+              "date",
+              "status"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "date": {
+                "type": "string"
+              },
+              "local": {
+                "type": "string"
+              },
+              "visitant": {
+                "type": "string"
+              },
+              "localScore": {
+                "type": "integer"
+              },
+              "visitingScore": {
+                "type": "integer"
+              },
+              "competition": {
+                "type": "string"
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "coming",
+                  "playing",
+                  "finished"
+                ]
+              },
+              "fase": {
+                "type": "string"
+              },
+              "bonus": {
+                "type": "boolean"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "bet_points": {
+            "type": "integer"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -658,6 +714,12 @@
           },
           "group": {
             "type": "string"
+          },
+          "match": {
+            "type": "string"
+          },
+          "bet_points": {
+            "type": "integer"
           },
           "published_at": {
             "type": "string",

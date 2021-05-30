@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "05/26/2021 5:00:56 PM"
+    "x-generation-date": "05/29/2021 4:49:03 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -6786,6 +6786,62 @@
               }
             }
           },
+          "match": {
+            "required": [
+              "id",
+              "date",
+              "status"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "date": {
+                "type": "string"
+              },
+              "local": {
+                "type": "string"
+              },
+              "visitant": {
+                "type": "string"
+              },
+              "localScore": {
+                "type": "integer"
+              },
+              "visitingScore": {
+                "type": "integer"
+              },
+              "competition": {
+                "type": "string"
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "coming",
+                  "playing",
+                  "finished"
+                ]
+              },
+              "fase": {
+                "type": "string"
+              },
+              "bonus": {
+                "type": "boolean"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "bet_points": {
+            "type": "integer"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -6805,6 +6861,12 @@
           },
           "group": {
             "type": "string"
+          },
+          "match": {
+            "type": "string"
+          },
+          "bet_points": {
+            "type": "integer"
           },
           "published_at": {
             "type": "string",
